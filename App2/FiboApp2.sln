@@ -5,18 +5,13 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp2.Presentation", "FiboApp2.Presentation\FiboApp2.Presentation.csproj", "{9C9B5F49-ED2D-4C99-82B3-A63BDD365A42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiboApp2.Application", "FiboApp2.Aplication\FiboApp2.Application.csproj", "{5BD69B60-665B-4D6F-8465-972762722F77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp2.Application", "FiboApp2.Aplication\FiboApp2.Application.csproj", "{5BD69B60-665B-4D6F-8465-972762722F77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiboApp2.Presentation.Publisher", "FiboApp2.Presentation.Publisher\FiboApp2.Presentation.Publisher.csproj", "{6DF72C1F-EB43-40E6-A0C3-071AB62A582D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp2.Presentation.Publisher", "FiboApp2.Presentation.Publisher\FiboApp2.Presentation.Publisher.csproj", "{6DF72C1F-EB43-40E6-A0C3-071AB62A582D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiboApp2.Presentation.Publisher.Abstractions", "FiboApp2.Presentation.Publisher.Abstractions\FiboApp2.Presentation.Publisher.Abstractions.csproj", "{E0C301A5-C751-4FCF-93CC-68CD4A0FA4B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp2.Presentation.Publisher.Abstractions", "FiboApp2.Presentation.Publisher.Abstractions\FiboApp2.Presentation.Publisher.Abstractions.csproj", "{E0C301A5-C751-4FCF-93CC-68CD4A0FA4B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiboApp2.Application.Abstractions", "FiboApp2.Application.Abstractions\FiboApp2.Application.Abstractions.csproj", "{29C3C9CC-B53D-4FD5-8ED3-45B6E2F50FF8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9CB236AD-645F-4095-AB05-48AF439105E0}"
-	ProjectSection(SolutionItems) = preProject
-		Todo.txt = Todo.txt
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp2.Application.Abstractions", "FiboApp2.Application.Abstractions\FiboApp2.Application.Abstractions.csproj", "{29C3C9CC-B53D-4FD5-8ED3-45B6E2F50FF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

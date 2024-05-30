@@ -7,21 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp1.Presentation", "Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp1.Application", "FiboApp1.Application\FiboApp1.Application.csproj", "{0F49DDBD-20CC-4EB5-AEBB-C1CE2FC4E959}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiboApp1.Presentation.FiboApp2Client", "FiboApp1.Presentation.FiboApp2Client\FiboApp1.Presentation.FiboApp2Client.csproj", "{04C26647-3D5B-41BA-B860-E6D5BC6102B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp1.Presentation.FiboApp2Client", "FiboApp1.Presentation.FiboApp2Client\FiboApp1.Presentation.FiboApp2Client.csproj", "{04C26647-3D5B-41BA-B860-E6D5BC6102B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiboApp1.Application.Abstractions", "FiboApp1.Application.Abstractions\FiboApp1.Application.Abstractions.csproj", "{ACC4B826-4067-4C9A-8434-13A9BF8A7310}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp1.Application.Abstractions", "FiboApp1.Application.Abstractions\FiboApp1.Application.Abstractions.csproj", "{ACC4B826-4067-4C9A-8434-13A9BF8A7310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiboApp1.Presentation.FiboApp2Client.Abstractions", "FiboApp1.Presentation.FiboApp2Client.Abstractions\FiboApp1.Presentation.FiboApp2Client.Abstractions.csproj", "{22F9D12D-7B9C-42FF-BA45-4699C72FAAA8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{E1ED7F48-ECEE-4C34-889E-89072F844273}"
-	ProjectSection(SolutionItems) = preProject
-		docker.txt = docker.txt
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{430F75C3-153F-41C6-A98F-E4E5F9A8B87B}"
-	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiboApp1.Presentation.FiboApp2Client.Abstractions", "FiboApp1.Presentation.FiboApp2Client.Abstractions\FiboApp1.Presentation.FiboApp2Client.Abstractions.csproj", "{22F9D12D-7B9C-42FF-BA45-4699C72FAAA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
