@@ -18,7 +18,7 @@ namespace FiboApp2.Application.Services
 
         private readonly ConcurrentDictionary<BigInteger, BigInteger> _fiboPrevious = new ConcurrentDictionary<BigInteger, BigInteger>();
         private readonly ConcurrentDictionary<BigInteger, BigInteger> _fiboNext = new ConcurrentDictionary<BigInteger, BigInteger>();
-        private readonly ConcurrentDictionary<BigInteger, SemaphoreSlim> _semaphores = new ConcurrentDictionary<BigInteger, SemaphoreSlim>();
+        private readonly ConcurrentDictionary<BigInteger, object> _locks = new ConcurrentDictionary<BigInteger, object>();
 
         private readonly ConcurrentQueue<BigInteger> _cachedItems = new ConcurrentQueue<BigInteger>();
 
@@ -31,28 +31,28 @@ namespace FiboApp2.Application.Services
                 return _fiboNext[current];
             }
 
-            var semaphore = _semaphores.GetOrAdd(current, current => new SemaphoreSlim(1));
-            semaphore.Wait();
-
-            if (_fiboNext.ContainsKey(current))
+            var lockObject = _locks.GetOrAdd(current, current => new object());
+            lock (lockObject)
             {
-                return _fiboNext[current];
-            }
+                if (_fiboNext.ContainsKey(current))
+                {
+                    return _fiboNext[current];
+                }
 
-            BigInteger next;
-            if (_fiboPrevious.ContainsKey(current))
-            {
-                next = current + _fiboPrevious[current];
-            }
-            else
-            {
-                next = GetNextFromScratch(current);
-            }
+                BigInteger next;
+                if (_fiboPrevious.ContainsKey(current))
+                {
+                    next = current + _fiboPrevious[current];
+                }
+                else
+                {
+                    next = GetNextFromScratch(current);
+                }
 
-            SaveToCache(current, next);
-            FitCache();
-            semaphore.Release(int.MaxValue);
-            return next;
+                SaveToCache(current, next);
+                FitCache();
+                return next;
+            }
         }
 
         private void SaveToCache(BigInteger current, BigInteger next)
@@ -80,10 +80,7 @@ namespace FiboApp2.Application.Services
                 {
                     _cachedItems.TryPeek(out var keyToRemove);
                     _cachedItems.TryDequeue(out _);
-                    if (_semaphores.TryRemove(keyToRemove, out var semaphore))
-                    {
-                        semaphore.Dispose();
-                    }
+                    _locks.TryRemove(keyToRemove, out var _);
                     _fiboPrevious.TryRemove(keyToRemove, out var _);
                     _fiboNext.TryRemove(keyToRemove, out var _);
 
